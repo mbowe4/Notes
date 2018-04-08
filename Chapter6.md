@@ -1,5 +1,4 @@
-# Chapter 6
-## Interfaces, Lambda Expressions, and Inner Classes  
+# Chapter 6: Interfaces, Lambda Expressions, and Inner Classes  
 
 ### Interfaces
 - a way of describing *what* classes should do, without specifying *how*
