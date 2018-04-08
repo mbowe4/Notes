@@ -26,3 +26,58 @@ public class App {
 	}
 }
 ```
+
+### Defining Generic Class
+- T: compiler assumes *Object* is upper bound unless you specify T extends anther class
+- **Bounds:** when extending T must always be a subtype of its bounding type
+
+### Defining Generic methods
+- ex: `public static <T> T getmiddle(T... a) {...etc....};`
+
+### Type Erasure
+- at compile time type parameters are erased and replaced with Objects
+
+### Bridge Methods
+- created by the compiler to cast
+
+### Limitations of Generics
+- no primitive types
+- no runtime type inquiry on inner types
+- no arrays of paramaterized type (compiler will make them into Objects)
+- cannot be instantiated directly
+- no generic arrays
+- cannot be used as statics or genric classes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
