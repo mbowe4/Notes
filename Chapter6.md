@@ -1,13 +1,13 @@
-#Chapter 6
-##Interfaces, Lambda Expressions, and Inner Classes  
+# Chapter 6
+## Interfaces, Lambda Expressions, and Inner Classes  
 
-###Interfaces
+### Interfaces
 - a way of describing *what* classes should do, without specifying *how*
 - all methods of an interface are automatically public
 - never have instance fields
 - can just define constants and no methods - though this is not ideal
 
-###Object cloning
+### Object cloning
 - when you make a copy of a variable holding an object reference, changing the copy also changes the *original*   
 
 ```java
@@ -21,7 +21,7 @@ copy.raiseSalary(10);   // this also changes the original
 		- So in this example, only the Emplyee class can clone Employee objects
 		- deep copy vs. shallow copy
 
-###Lamba Expressions
+### Lamba Expressions
 - a block of code that can be passed around to be executed later
 - a block of code together with the specification of any variables that must be passed to the code 
 - object whose responsibility is to evaluate a function
@@ -42,16 +42,16 @@ copy.raiseSalary(10);   // this also changes the original
 () -> {for (int i = 100; i >= 0; i--) System.out.println(i); }
 ```
 
-###Functional Interfaces
+### Functional Interfaces
 - you can supply a _lamba expression_ whenever an objet of an interface with a single abstract method is expected - aka a *functional interface*
 
-###Inner Classes
+### Inner Classes
 - a class defined within another class
 - Uses:
 		- can access private data
 		- can be hidden from other classes in the same package
 
-###Comparators
+### Comparators
 - comparing method takes a "key extractor" function that maps a type *T* to a comparable type (ex: *String*) 
 		- for example: to sort an array of Person objects by name
 
