@@ -1,4 +1,4 @@
-##Interfaces  
+## Interfaces  
 - set of requirements
 - only contains method delcarations
 - all methods are implicity public
@@ -9,7 +9,7 @@
   
    
 
-####Comparable interface
+#### Comparable interface
 - allows you to sort custom object/define a natural order
 
 
