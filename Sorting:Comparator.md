@@ -42,7 +42,7 @@ public class App {
 }
 ```
 
-##compareTo Method:
+## compareTo Method:
 * can be used to sort arbitrary objects
 
 ```java
@@ -56,7 +56,7 @@ Collections.sort(people);  // This would *not* work by itself
 						// the Person object does not have natural order
 ```
 
-####Sort in order of name:
+#### Sort in order of name:
 
 ```java
 Collections.sort(people, new Comparator<Person>() {
