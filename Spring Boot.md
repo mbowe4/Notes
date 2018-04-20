@@ -10,7 +10,8 @@
 ## Why Spring Boot??
 * reduced time of developments & deployment
 * easily create enterprise-production-ready Spring applications
-* embedded containers such as Tomcat, Undertown, Jetty, etc.
+* embedded containers such as Tomcat, Undertow, Jetty, etc.
+* easily build scaleable applications for the cloud
 
 #### Maven & Spring Boot
 * Maven is a build/dependency managment tool that allows you to delcare all dependencies in a single file (pom.xml)
@@ -35,6 +36,12 @@
 		2. Java annotations
 		3. Java code
 * POJO classes + configuration metadata => IoC => fully executable application
+
+### Customizing Spring boot app
+* customize banner
+* through `application.properties/yml`
+	* yml: yet another markup language
+* 
 
 ### Life Cycle of a Bean
 1. _Bean is instantiated_
@@ -67,7 +74,7 @@ public class HomeController {
 
 * **`@RequestParam`**: binds Servlet request parameters to handler/controller method parameters
 * **`@SpringBootApplication`**: same as declaring the following 3 annotations:
-	* **`@Configuration`**: marks class as containng 1 or more Spring bean declarations
+	* **`@Configuration`**: marks class as containing 1 or more Spring bean declarations
 	* **`@ComponentScan`**: tells Spring to scan and look for classes annotated with `@Configuration`, `@Service`, `@Repository`, etc.
 	* **`@EnableAutoConfiguration`**: enables Spring's auto-configuration behavior which creates bean configurations based dependencies & configurations in the classpath.  
 	
@@ -81,7 +88,7 @@ public class HomeController {
 
 #### JPA
 * Standards-based API for accessing, storing, & managing data between Java objects and relational databases. It is a specification, and there are many implementations (Hibernate, TopLink, etc.)
-* Annotationst that indicate data should be persisted to database:
+* Annotations that indicate data should be persisted to database:
 	*  **`@Entity`**: 
 	*  **`@Id`**: allows instances of the class to be easily persisted and retrieved using JPA technology
 	*  **`@GeneratedValue`**
@@ -110,6 +117,13 @@ public class HomeController {
 	2. Identifies controllers (things marked with `@Controller` & contain `@RequestMapping` annotations)
 	3. If the app has the Tomcat server as a dependency, it will use it when the app is run
 
+## Profiles
+*	use profile-specific properties
+
+## Logging
+* Spring Boot uses Commons Logging for internal logging, _Logback_ is the default
+* Set the logging level configuration
+
 ## Tests
 
 **Example Test:**
@@ -127,6 +141,9 @@ class SimpleWebTest {
 * To run test: `spring test app.groovy test.groovy`
 
 * `@WebApplicationContext`: used to test a web app, loads the org.springframework.web.context.WebApplicationContext implementation, which ensures that all the files and beans related to the app are accessible
+* **Spring not testing for objects**
+	* not testing rest controller for value it returns
+* test HTTP values (201, 200) and type returned
 
 ## Domain Driven Design
 
@@ -142,8 +159,11 @@ class SimpleWebTest {
 * spring batch
 
 ## .jar & .war files
-* **_.jar files_**: contain libraries, resources & accessories files
-* **_.war files_**: contains the web application that can be deployed on any servlet/jsp container. The .war file contains jsp, html, javascript and other files necessary for the development of web applications
+* **_.jar files_**: contain libraries, resources & accessories files. Contains class files. 
+	* Self-contained - already contains server (Tomcat)
+* **_.war files_**: contains the web application that can be deployed on any servlet/jsp container. The .war file contains jsp, html, javascript and other files necessary for the development of web applications. Don't contain servers
+	* intended to be packaged inside a server
+	* 
 
 ## REST controllers
 * **What is a controller?**: a java class marked with annotations that has info about:
@@ -167,7 +187,19 @@ public class HelloController {
 ## Building a REST API
 1. Identify the resources (usually nouns)
 2. Identify how the user can access the resources (HTTP methods)
-3. 
+
+## 12-Factor App
+* used to determine if the application architecture would be suitable for the cloud and/or highly scaleable
+* https://12factor.net/
+* process = individual applications, threads are 
+
+## Spring web development
+* DispatcherServlet: dispatches calls
+* viewresolver: resolves view
+
+## JDBC & JPA
+* JPA depends on JDBC
+* JdbcTemplate
 	
 
 
