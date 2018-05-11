@@ -1,7 +1,9 @@
-# Sql
+# SQL
 
-```Java
-Select * From employees
+
+```sql
+Select * 
+From employees
 Where employees.name Like 'A%'
 ```
 
@@ -28,7 +30,7 @@ Where employees.name Like 'A%'
 
 **Create a table**:
 
-```java
+```sql
 CREATE TABLE zipcode.teachers
 (
 	id INTEGER PRIMARY KEY NOT NULL AUTO_INCREMENT,

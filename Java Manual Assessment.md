@@ -70,6 +70,10 @@ public String getName() {
 	
 
 ## What does MVC stand for? What is an example of the model?
+* MVC stands for **M**odel, **V**iew, **C**ontroller
+* Model stores the data, ex: a database
+* View is what the user interacts with
+* Controller is 
 
 ## What is a modifier?
 
@@ -84,7 +88,33 @@ public String getName() {
 ## What are some primitive data types and what is a primitive?
 * **_Primitive_**: a primitive is the most basic data type in Java. They are the building blocks for data manipulation, and hold fixed values.
 
-![primitive Types](/Users/madelinebowe/Documents/notes/primitiveTypes.png)
+![primitive Types](https://github.com/mbowe4/Notes/blob/master/primitiveTypes.png)
+
+## What are packages and what are they good for?
+* Packages organize code
+
+## What is an interface?
+* An interface is a contract. It specifies a set of requirements/behaviors that implementing classes should have, without regard to *how* it is implemented.
+* Contain only method declarations
+* Methods are implicity public
+* Does not enforce state, only behavior
+
+
+## Can you instantiate an interface?
+* Interfaces cannot be instantiated, they can only be *implemented*
+
+## What is an abstract class?
+* An abstract class contains one or more abstract methods. It cannot be instantiated, but is used by instantiating an a class that extends it.
+* Subclasses must provide implementations for the abstract methods
+* Can contain methods and fields, and declare different levels of access
+
+## Can you instantiate an abstract class?
+* NO
+* The only way to use an abstract class is to instantiate an inheriting subclass
+
+## What is an anonymous inner class?
+
+## What is a relational database?
 
 
 
